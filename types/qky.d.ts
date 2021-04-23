@@ -1,4 +1,4 @@
-import Vue, { PluginObject } from 'vue'
+import Vue from 'vue'
 import { QkyUIComponent, QkyUIComponentSize, QkyUIHorizontalAlignment } from './component'
 
 

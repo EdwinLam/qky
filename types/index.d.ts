@@ -1,4 +1,3 @@
 export * from './qky'
-
-import * as qky from './qky'
-export default qky
+import * as Qky from './qky'
+export default Qky

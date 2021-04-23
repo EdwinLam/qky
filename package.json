@@ -1,6 +1,6 @@
 {
   "name": "qky",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./dist/qky.common.js",
   "files": [
     "dist/*",
@@ -11,11 +11,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name qky ./src/main.js",
+    "build-bundle": "vue-cli-service build --target lib --name qky ./src/packages/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.1",
+    "qky": "^1.0.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {
