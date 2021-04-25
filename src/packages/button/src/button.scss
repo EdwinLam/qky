@@ -1,0 +1,61 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/_var.scss';
+.qky-button{
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  transition: .1s;
+  font-weight: 500;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+
+  & + & {
+    margin-left: 10px
+  }
+
+  &::-moz-focus-inner {
+    border: 0
+  }
+  & [class*=qky-icon-] + span {
+    margin-left: 5px
+  }
+  &.is-loading {
+    position: relative;
+    pointer-events: none
+  }
+
+  &.is-round {
+    border-radius: 20px;
+    padding: 12px 23px
+  }
+
+  &.is-circle {
+    border-radius: 50%;
+    padding: 12px
+  }
+
+  @include button-type-init(
+          #606266,$default-background,#dcdfe6,
+          #409EFF, #c6e2ff,#ecf5ff,
+          #C0C4CC,$default-background,#EBEEF5
+  );
+  &--primary{
+    @include normal-button-init($theme-color);
+  }
+  &--success{
+    @include normal-button-init($success-color);
+  }
+
+
+}
+
+
+
+

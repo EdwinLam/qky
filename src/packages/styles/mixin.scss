@@ -1,0 +1,54 @@
+@mixin button-type-init(
+  $default-color,
+  $default-bg-color,
+  $default-border-color,
+  $emphasize-color,
+  $emphasize-bg-color,
+  $emphasize-border-color,
+  $disabled-color,
+  $disabled-bg-color,
+  $disabled-border-color
+){
+  & {
+    color: $default-color;
+    background-color: $default-bg-color;
+    border: 1px solid $default-border-color;
+  }
+
+  &:focus, &:hover {
+    color: $emphasize-color;
+    border: 1px solid $emphasize-border-color;
+    background-color: $emphasize-bg-color;
+  }
+
+  &:active {
+    color: $emphasize-color,;
+    background: $emphasize-bg-color;
+    border: 1px solid $emphasize-border-color;
+    outline: 0
+  }
+
+  &.is-disabled.el-button--text {
+    background-color: transparent
+  }
+
+  &.is-disabled,
+  &.is-disabled:active,
+  &.is-disabled:focus,
+  &.is-disabled:hover {
+    cursor: not-allowed;
+    background-image: none;
+    color: $disabled-color;
+    background-color:  $disabled-bg-color;
+    border: 1px solid  $disabled-border-color;
+  }
+}
+
+@mixin normal-button-init( $theme-color){
+  $currentColor:lighten($theme-color,5%);
+  @include button-type-init(
+                  #FFF,$theme-color,$theme-color,
+                  #FFF,lighten($theme-color,5%),lighten($theme-color,5%),
+                  #FFF,lighten($theme-color,30%),lighten($theme-color,30%)
+  );
+}

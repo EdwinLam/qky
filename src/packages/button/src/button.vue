@@ -1,12 +1,12 @@
 <template>
   <button
-    class="btn"
+    class="qky-button"
     @click="handleClick"
     :disabled="buttonDisabled || loading"
     :autofocus="autofocus"
     :type="nativeType"
     :class="[
-      type ? 'btn-' + type : '',
+      type ? 'qky-button--' + type : '',
       buttonSize ? 'button-' + buttonSize : '',
       {
         'is-disabled': buttonDisabled,
@@ -76,3 +76,7 @@
     }
   };
 </script>
+<style lang="scss" scoped>
+  @import "../../styles/_var.scss";
+  @import "./button.scss";
+</style>

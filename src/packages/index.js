@@ -1,6 +1,5 @@
 import Button from './button'
 import ButtonGroup from './button/src/button-group'
-
 const components = [
     Button,ButtonGroup
 ]
